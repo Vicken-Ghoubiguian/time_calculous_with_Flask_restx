@@ -9,4 +9,4 @@
 * [Quick start - Flask-restx](https://flask-restx.readthedocs.io/en/latest/quickstart.html),
 * [How to edit Flask-plus default swagger-UI text - stack overflow](https://stackoverflow.com/questions/53237385/how-to-edit-flask-plus-default-swagger-ui-text),
 * [venv — Creation of virtual environments - Python's official documentation](https://docs.python.org/3/library/venv.html),
-* [](),
+* [Swagger documentation - Documenting with the @api.doc() decorator - Python's official documentation](https://flask-restx.readthedocs.io/en/latest/swagger.html),
