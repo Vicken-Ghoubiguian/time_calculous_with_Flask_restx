@@ -10,7 +10,7 @@ class HelloWorld(Resource):
     def get(self):
         return {'hello': 'world'}
 
-@time_calculous_api.route('/hello_1/<id>/<id_1>', doc={'params': {'id': 'An ID', 'id_1': 'An ID_1'}})
+@time_calculous_api.route('/hello_1/<int:id>/<int:id_1>', doc={'params': {'id': 'An ID', 'id_1': 'An ID_1'}})
 class HelloWorld_1(Resource):
     def get(self,id,id_1):
         return {'nbr': id}
