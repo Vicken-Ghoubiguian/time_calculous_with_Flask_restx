@@ -18,6 +18,7 @@ class Time_calculous_presentation_route(Resource):
 'https://github.com/Vicken-Ghoubiguian/time_calculous'}, 200
 
 @ns_time_calculous.route('/<string:function>/<int:id>/<int:id_1>', doc={'params': {'function': 'Choosed function of the "time_calculous" C library to execute', 'id': 'An ID', 'id_1': 'An ID_1'}})
+@ns_time_calculous.param('function', 'function', _in='query', type=str, enum=['number_of_days_in_choosen_month_in_choosen_year', 'wished_number_in_year_is_day_in_choosen_year'])
 class Time_calculous_main_route(Resource):
     def get(self,function,id,id_1):
 
