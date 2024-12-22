@@ -6,7 +6,7 @@ time_calculous_api = Api(time_calculous_with_flask_restx, title='time_calculous 
 
 ns_time_calculous = time_calculous_api.namespace('time_calculous_operations', description='time_calculous operations for')
 
-@ns_time_calculous.route('')
+@ns_time_calculous.route('/introduction')
 class Time_calculous_presentation_route(Resource):
     def get(self):
 
@@ -17,16 +17,16 @@ class Time_calculous_presentation_route(Resource):
         return {'presentation' : '', 'description': '', 'github' : 'https://github.com/Vicken-Ghoubiguian/time_calculous_with_Flask_restx', 'dockerhub' : '', 'time_calculous' : 
 'https://github.com/Vicken-Ghoubiguian/time_calculous'}, 200
 
-@ns_time_calculous.route('/<string:function>/<int:id>/<int:id_1>', doc={'params': {'function': 'Choosed function of the "time_calculous" C library to execute', 'id': 'An ID', 'id_1': 'An ID_1'}})
+@ns_time_calculous.route('/documentation/<string:function>', doc={'params': {'function': 'Choosed function of the "time_calculous" C library to execute'}})
 @ns_time_calculous.param('function', 'function', _in='query', type=str, enum=['number_of_days_in_choosen_month_in_choosen_year', 'wished_number_in_year_is_day_in_choosen_year'])
 class Time_calculous_main_route(Resource):
-    def get(self,function,id,id_1):
+    def get(self,function):
 
         """
         Route 2, coming !
         """
 
-        return {'function': function, 'nbr': id, 'nbr_1': id_1}, 200
+        return {'function': function}, 200
 
 if __name__ == '__main__':
     time_calculous_with_flask_restx.run(debug=True)
