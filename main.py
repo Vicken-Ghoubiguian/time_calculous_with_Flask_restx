@@ -38,9 +38,11 @@ class Time_calculous_documentation_lexicon(Resource):
         return {'function': function}, 200
 
 #
-@ns_time_calculous_functions.route('/number_of_days_in_choosen_month_in_choosen_year', doc={})
+@ns_time_calculous_functions.route('/number_of_days_in_choosen_month_in_choosen_year/<int:month>/<int:year>', doc={})
+@ns_time_calculous_functions.param('month', 'month', _in='query', type=int)
+@ns_time_calculous_functions.param('year', 'year', _in='query', type=int)
 class Time_calculous_functions_numberOfDaysInChoosenMonthInChoosenYear(Resource):
-    def get(self):
+    def get(self, month, year):
 
         """
         Route 3, coming !
