@@ -51,6 +51,18 @@ class Time_calculous_functions_numberOfDaysInChoosenMonthInChoosenYear(Resource)
         return {'coming' : 0}, 200
 
 #
+@ns_time_calculous_functions.route('/number_of_weeks_in_a_year_according_to_the_iso_norm/<int:year>', doc={})
+@ns_time_calculous_functions.param('year', 'year', _in='query', type=int)
+class Time_calculous_functions_numberOfWeeksInAYearAccordingToTheIsoNorm(Resource):
+    def get(self, year):
+
+        """
+        Route 4, coming !
+        """
+
+        return {'coming' : 0}, 200
+
+#
 if __name__ == '__main__':
 
     #
