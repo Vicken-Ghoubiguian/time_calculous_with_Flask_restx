@@ -3,6 +3,9 @@ from flask import Flask
 from flask_restx import Resource, Api
 
 #
+time_calculous_function = ['number_of_days_in_choosen_month_in_choosen_year', 'wished_number_in_year_is_day_in_choosen_year', 'wished_wday_in_choosen_year']
+
+#
 time_calculous_with_flask_restx = Flask(__name__)
 time_calculous_api = Api(time_calculous_with_flask_restx, title='time_calculous API', description='Coming !')
 
@@ -23,7 +26,7 @@ class Time_calculous_presentation_route(Resource):
 
 #
 @ns_time_calculous.route('/documentation/<string:function>', doc={'params': {'function': 'Choosed function of the "time_calculous" C library to execute'}})
-@ns_time_calculous.param('function', 'function', _in='query', type=str, enum=['number_of_days_in_choosen_month_in_choosen_year', 'wished_number_in_year_is_day_in_choosen_year', 'wished_wday_in_choosen_year'])
+@ns_time_calculous.param('function', 'function', _in='query', type=str, enum=time_calculous_function)
 class Time_calculous_main_route(Resource):
     def get(self,function):
 
