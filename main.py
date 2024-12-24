@@ -63,6 +63,18 @@ class Time_calculous_functions_numberOfWeeksInAYearAccordingToTheIsoNorm(Resourc
         return {'coming' : 0}, 200
 
 #
+@ns_time_calculous_functions.route('/wished_wday_in_choosen_year/<int:number_of_weekday_in_the_year>/<int:month>/<int:year>', doc={})
+@ns_time_calculous_functions.param('number_of_weekday_in_the_year', 'number_of_weekday_in_the_year', _in='query', type=int)
+@ns_time_calculous_functions.param('month', 'month', _in='query', type=int)
+@ns_time_calculous_functions.param('year', 'year', _in='query', type=int)
+class Time_calculous_functions_wishedWdayInChoosenYear(Resource):
+    def get(self, number_of_weekday_in_the_year, month, year):
+
+        """
+        Route 5, coming !
+        """
+
+        return {'coming' : 0}, 200
 
 #
 @ns_time_calculous_functions.route('/wished_number_in_year_is_day_in_choosen_year/<int:mday>/<int:month>/<int:year>', doc={})
