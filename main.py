@@ -9,7 +9,7 @@ time_calculous_function = ['number_of_days_in_choosen_month_in_choosen_year', 'w
 time_calculous_with_flask_restx = Flask(__name__)
 time_calculous_api = Api(time_calculous_with_flask_restx, title='time_calculous API', description='Coming !')
 
-#
+# Definition of all namespaces
 ns_time_calculous_documentation = time_calculous_api.namespace('documentation', description='for test')
 ns_time_calculous_functions = time_calculous_api.namespace('functions', description='for test')
 
