@@ -10,11 +10,11 @@ time_calculous_with_flask_restx = Flask(__name__)
 time_calculous_api = Api(time_calculous_with_flask_restx, title='time_calculous API', description='Coming !')
 
 #
-ns_time_calculous = time_calculous_api.namespace('time_calculous_operations', description='time_calculous operations for')
+ns_time_calculous_documentation = time_calculous_api.namespace('documentation', description='for test')
 
 #
-@ns_time_calculous.route('/introduction')
-class Time_calculous_presentation_route(Resource):
+@ns_time_calculous_documentation.route('/presentation')
+class Time_calculous_documentation_presentation_route(Resource):
     def get(self):
 
         """
@@ -25,9 +25,9 @@ class Time_calculous_presentation_route(Resource):
 'https://github.com/Vicken-Ghoubiguian/time_calculous'}, 200
 
 #
-@ns_time_calculous.route('/documentation/<string:function>', doc={'params': {'function': 'Choosed function of the "time_calculous" C library to execute'}})
-@ns_time_calculous.param('function', 'function', _in='query', type=str, enum=time_calculous_function)
-class Time_calculous_main_route(Resource):
+@ns_time_calculous_documentation.route('/lexicon/<string:function>', doc={'params': {'function': 'Choosed function of the "time_calculous" C library to execute'}})
+@ns_time_calculous_documentation.param('function', 'function', _in='query', type=str, enum=time_calculous_function)
+class Time_calculous_documentation_lexicon(Resource):
     def get(self,function):
 
         """
