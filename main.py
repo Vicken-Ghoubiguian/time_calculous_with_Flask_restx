@@ -85,7 +85,7 @@ class Time_calculous_functions_wishedNumberInYearIsDayInChoosenYear(Resource):
     def get(self, mday, month, year):
 
         """
-        Route 5, coming !
+        Route 6, coming !
         """
 
         return {'coming' : 0}, 200
