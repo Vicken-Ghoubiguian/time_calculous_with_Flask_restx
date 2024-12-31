@@ -32,7 +32,7 @@ To finish, your virtual environment is ready. To activate it, you have to activa
 source the_name_of_your_virtual_environment/bin/activate
 ```
 
-<u>Precision :</u> in this little tutorial, the created virtual environment is named `the_name_of_your_virtual_environment` but you can give it the name that you want.
+Precision : in this little tutorial, the created virtual environment is named `the_name_of_your_virtual_environment` but you can give it the name that you want.
 
 <a name="useful_links"></a>
 ## Useful links
