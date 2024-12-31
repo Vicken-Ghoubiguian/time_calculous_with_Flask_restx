@@ -11,13 +11,13 @@
 To create and configure your virtual environment, you have to create it using the command bellow :
 
 ```bash
-python3 -m venv <the_name_of_your_virtual_environment>
+python3 -m venv the_name_of_your_virtual_environment
 ```
 
 You have to activate now your virtual environment for the first time using the command bellow :
 
 ```bash
-source <the_name_of_your_virtual_environment>/bin/activate
+source the_name_of_your_virtual_environment/bin/activate
 ```
 
 Then you have now to install of PyPi packages using the command bellow :
@@ -29,10 +29,10 @@ pip3 install -r requirements.txt
 To finish, your virtual environment is ready. To activate it, you have to activate it using the command bellow :
 
 ```bash
-source <the_name_of_your_virtual_environment>/bin/activate
+source the_name_of_your_virtual_environment/bin/activate
 ```
 
-Precision : 
+<u>Precision :</u> in this little tutorial, the created virtual environment is named `the_name_of_your_virtual_environment` but you can give it the name that you want.
 
 <a name="useful_links"></a>
 ## Useful links
