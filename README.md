@@ -8,7 +8,25 @@
 <a name="how_to_create_and_configure_your_virtual_environment"></a>
 ### How to create and configure your virtual environment ?
 
+To create and configure your virtual environment, you have to create it using the command bellow :
 
+````bash
+python3 -m venv <the_name_of_your_virtual_environment>
+```
+
+````bash
+source <the_name_of_your_virtual_environment>/bin/activate
+```
+
+````bash
+pip3 install -r requirements.txt
+```
+
+Then, your virtual environment is ready. To activate it, you have to activate it using the command bellow :
+
+````bash
+source <the_name_of_your_virtual_environment>/bin/activate
+```
 
 <a name="useful_links"></a>
 ## Useful links
