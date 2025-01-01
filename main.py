@@ -19,7 +19,7 @@ class Time_calculous_documentation_presentation_route(Resource):
     def get(self):
 
         """
-        Route 1, coming !
+        Presentation of the time_calculous API with all useful and resourceful links
         """
 
         return {'presentation' : '', 'description': '', 'github' : 'https://github.com/Vicken-Ghoubiguian/time_calculous_with_Flask_restx', 'dockerhub' : '', 'time_calculous' : 
@@ -32,7 +32,7 @@ class Time_calculous_documentation_lexicon(Resource):
     def get(self,function):
 
         """
-        Route 2, coming !
+        Presentation and description of all available functions in the time_calculous API from the time_calculous C library
         """
 
         return {'function': function}, 200
