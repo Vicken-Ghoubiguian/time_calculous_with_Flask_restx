@@ -42,3 +42,5 @@ Precision : in this little tutorial, the created virtual environment is named `t
 * [venv — Creation of virtual environments - Python's official documentation](https://docs.python.org/3/library/venv.html),
 * [Swagger documentation - Documenting with the @api.doc() decorator - Python's official documentation](https://flask-restx.readthedocs.io/en/latest/swagger.html),
 * [Full example - Flask-restx](https://flask-restx.readthedocs.io/en/latest/example.html)
+* [Calling C Functions from Python](https://www.digitalocean.com/community/tutorials/calling-c-functions-from-python),
+* [ctypes — A foreign function library for Python](https://docs.python.org/3/library/ctypes.html)
