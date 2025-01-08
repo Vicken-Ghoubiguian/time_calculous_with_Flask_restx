@@ -2,7 +2,7 @@
 from flask import Flask
 from flask_restx import Resource, Api
 from ctypes import *
-from os import path
+from os import path, system
 
 #
 so_time_calculous_file = "time_calculous.so"
@@ -11,7 +11,8 @@ so_time_calculous_file = "time_calculous.so"
 if not path.exists(so_time_calculous_file):
 
     #
-    exit()
+    system("git clone https://github.com/Vicken-Ghoubiguian/time_calculous")
+    system("cc -fPIC -shared -o time_calculous.so time_calculous/time_calculous/time_calculous.c")
 
 #
 time_calculous_functions = CDLL(so_time_calculous_file)
