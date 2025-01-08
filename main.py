@@ -1,6 +1,13 @@
 # Import all necessary Python modules
 from flask import Flask
 from flask_restx import Resource, Api
+from ctypes import *
+
+#
+so_time_calculous_file = "time_calculous.so"
+
+#
+time_calculous_functions = CDLL(so_time_calculous_file)
 
 # Definition of the 'time_calculous_function' array which contains all functions in the 'time_calculous' C library
 time_calculous_function = ['number_of_days_in_choosen_month_in_choosen_year', 'wished_number_in_year_is_day_in_choosen_year', 'wished_wday_in_choosen_year']
@@ -60,7 +67,11 @@ class Time_calculous_functions_numberOfWeeksInAYearAccordingToTheIsoNorm(Resourc
         Route 4, coming !
         """
 
-        return {'coming' : 0}, 200
+        #
+        nb_of_weeks_in_year_according_iso = time_calculous_functions.number_of_weeks_in_a_year_according_to_the_iso_norm(year)
+
+        #
+        return {'year' : year, 'nb_of_weeks' : nb_of_weeks_in_year_according_iso}, 200
 
 #
 @ns_time_calculous_functions.route('/wished_wday_in_choosen_year/<int:number_of_weekday_in_the_year>/<int:month>/<int:year>', doc={})
