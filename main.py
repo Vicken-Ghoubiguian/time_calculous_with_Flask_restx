@@ -55,7 +55,10 @@ class Time_calculous_functions_numberOfDaysInChoosenMonthInChoosenYear(Resource)
         Route 3, coming !
         """
 
-        return {'coming' : 0}, 200
+        #
+        nb_of_days_in_month_in_year = time_calculous_functions.number_of_days_in_choosen_month_in_choosen_year(month, year)
+
+        return {'year' : year, 'month' : month, 'nb_of_days' : nb_of_days_in_month_in_year}, 200
 
 #
 @ns_time_calculous_functions.route('/number_of_weeks_in_a_year_according_to_the_iso_norm/<int:year>', doc={})
