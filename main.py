@@ -96,7 +96,7 @@ class Time_calculous_functions_wishedWdayInChoosenYear(Resource):
     def get(self, year, wday, number_of_weekday_in_the_year):
 
         """
-        Determination of the day according the number of the wished weekday in the wished year
+        Determination of the day (as timestamp) according the number of the wished weekday in the wished year
         """
 
         #
@@ -114,7 +114,7 @@ class Time_calculous_functions_wishedNumberInYearIsDayInChoosenYear(Resource):
     def get(self, mday, month, year):
 
         """
-        Calculation of the 
+        Determination of the number of the choosen mday in the choosen month in the choosen year
         """
 
         #
