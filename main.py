@@ -37,6 +37,7 @@ class Time_calculous_documentation_presentation_route(Resource):
         Presentation of the time_calculous API with all useful and resourceful links
         """
 
+        #
         return {'presentation' : '', 'description': '', 'github' : 'https://github.com/Vicken-Ghoubiguian/time_calculous_with_Flask_restx', 'dockerhub' : '', 'time_calculous' : 
 'https://github.com/Vicken-Ghoubiguian/time_calculous'}, 200
 
@@ -50,6 +51,7 @@ class Time_calculous_documentation_lexicon(Resource):
         Presentation and description of all available functions in the time_calculous API from the time_calculous C library
         """
 
+        #
         return {'function': function}, 200
 
 #
