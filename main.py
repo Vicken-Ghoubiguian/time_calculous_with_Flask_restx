@@ -62,7 +62,7 @@ class Time_calculous_functions_numberOfDaysInChoosenMonthInChoosenYear(Resource)
     def get(self, month, year):
 
         """
-        Route 3, coming !
+        Calculation of the total count of days in the choosen month in the choosen year
         """
 
         #
@@ -78,7 +78,7 @@ class Time_calculous_functions_numberOfWeeksInAYearAccordingToTheIsoNorm(Resourc
     def get(self, year):
 
         """
-        Route 4, coming !
+        Calculation of the total count of weeks in the choosing year
         """
 
         #
@@ -96,7 +96,7 @@ class Time_calculous_functions_wishedWdayInChoosenYear(Resource):
     def get(self, year, wday, number_of_weekday_in_the_year):
 
         """
-        Route 5, coming !
+        Calculation of the day's number of the wished weekday in the wished year
         """
 
         #
