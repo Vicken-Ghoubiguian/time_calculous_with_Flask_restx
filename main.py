@@ -64,9 +64,9 @@ class Time_calculous_functions_numberOfDaysInChoosenMonthInChoosenYear(Resource)
         """
 
         #
-        nb_of_days_in_month_in_year = time_calculous_functions.number_of_days_in_choosen_month_in_choosen_year(month, year)
+        result = time_calculous_functions.number_of_days_in_choosen_month_in_choosen_year(month, year)
 
-        return {'year' : year, 'month' : month, 'result' : nb_of_days_in_month_in_year}, 200
+        return {'year' : year, 'month' : month, 'result' : result}, 200
 
 #
 @ns_time_calculous_functions.route('/number_of_weeks_in_a_year_according_to_the_iso_norm/<int:year>', doc={})
@@ -79,10 +79,10 @@ class Time_calculous_functions_numberOfWeeksInAYearAccordingToTheIsoNorm(Resourc
         """
 
         #
-        nb_of_weeks_in_year_according_iso = time_calculous_functions.number_of_weeks_in_a_year_according_to_the_iso_norm(year)
+        result = time_calculous_functions.number_of_weeks_in_a_year_according_to_the_iso_norm(year)
 
         #
-        return {'year' : year, 'result' : nb_of_weeks_in_year_according_iso}, 200
+        return {'year' : year, 'result' : result}, 200
 
 #
 @ns_time_calculous_functions.route('/wished_wday_in_choosen_year/<int:number_of_weekday_in_the_year>/<int:month>/<int:year>', doc={})
@@ -95,6 +95,8 @@ class Time_calculous_functions_wishedWdayInChoosenYear(Resource):
         """
         Route 5, coming !
         """
+
+        #
 
         return {'coming' : 0}, 200
 
@@ -110,7 +112,11 @@ class Time_calculous_functions_wishedNumberInYearIsDayInChoosenYear(Resource):
         Route 6, coming !
         """
 
-        return {'coming' : 0}, 200
+        #
+        result = time_calculous_functions.wished_number_in_year_is_day_in_choosen_year(mday, month, year)
+
+        #
+        return {'mday' : mday, 'month' : month, 'year' : year, 'result' : result}, 200
 
 #
 if __name__ == '__main__':
