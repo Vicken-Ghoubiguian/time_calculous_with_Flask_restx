@@ -2,7 +2,6 @@
 from flask import Flask
 from flask_restx import Resource, Api
 from ctypes import *
-#from enum import numeral
 from os import path, system
 
 #
@@ -17,13 +16,6 @@ if not path.exists(so_time_calculous_file):
 
 #
 time_calculous_functions = CDLL(so_time_calculous_file)
-
-#class NUMERAL(numeral):
-#    FIRST = 0
-#    SECOND = 1
-#    THIRD = 2
-#    BEFORE_LAST = 3
-#    LAST = 4
 
 # Definition of the 'time_calculous_function' array which contains all functions in the 'time_calculous' C library
 time_calculous_function = ['number_of_days_in_choosen_month_in_choosen_year', 'wished_number_in_year_is_day_in_choosen_year', 'wished_wday_in_choosen_year']
