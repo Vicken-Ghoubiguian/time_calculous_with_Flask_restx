@@ -96,7 +96,7 @@ class Time_calculous_functions_wishedWdayInChoosenYear(Resource):
     def get(self, year, wday, number_of_weekday_in_the_year):
 
         """
-        Determination of the day (as timestamp) according the number of the wished weekday in the wished year
+        Determination of the day according the number of the wished weekday in the wished year
         """
 
         #
@@ -125,17 +125,24 @@ class Time_calculous_functions_wishedNumberInYearIsDayInChoosenYear(Resource):
     
 #
 @ns_time_calculous_functions.route('/wished_wday_in_choosen_month/<int:year>/<int:month>/<int:wday>/<int:hour>/<int:minute>/<int:second>', doc={})
+@ns_time_calculous_functions.param('year', 'year', _in='query', type=int)
+@ns_time_calculous_functions.param('month', 'month', _in='query', type=int)
+@ns_time_calculous_functions.param('wday', 'wday', _in='query', type=int)
+@ns_time_calculous_functions.param('hour', 'hour', _in='query', type=int)
+@ns_time_calculous_functions.param('minute', 'minute', _in='query', type=int)
+@ns_time_calculous_functions.param('second', 'second', _in='query', type=int)
 class Time_calculous_functions_wishedWdayInChoosenMonth(Resource):
     def get(self, year, month, wday, hour, minute, second):
 
         """
+        Determination of the wished weekday in a choosen month in a choosen year at a choosen time with second, minute, and hour
         """
 
         #
         result = time_calculous_functions.wished_wday_in_choosen_month(year, month, wday, hour, minute, second, 0)
 
         #
-        return {'result' : result}
+        return {'result' : result}, 200
 
 #
 if __name__ == '__main__':
