@@ -131,15 +131,13 @@ class Time_calculous_functions_wishedNumberInYearIsDayInChoosenYear(Resource):
 @ns_time_calculous_functions.param('hour', 'hour', _in='query', type=int)
 @ns_time_calculous_functions.param('minute', 'minute', _in='query', type=int)
 @ns_time_calculous_functions.param('second', 'second', _in='query', type=int)
-#@ns_time_calculous_functions.param('numeral', 'numeral', _in='query', type=[0, 1, 2, 3, 4, 5])
+@ns_time_calculous_functions.param('numeral', 'numeral', _in='query', type=int, choices=[0, 1, 2, 3, 4])
 class Time_calculous_functions_wishedWdayInChoosenMonth(Resource):
     def get(self, year, month, wday, hour, minute, second, numeral):
 
         """
         Calculation of the wished weekday in a choosen month in a choosen year at a choosen time with second, minute, and hour
         """
-
-        numeral = 0
 
         #
         result = time_calculous_functions.wished_wday_in_choosen_month(year, month, wday, hour, minute, second, numeral)
