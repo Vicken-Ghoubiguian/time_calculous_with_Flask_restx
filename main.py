@@ -6,19 +6,6 @@ from os import path, system
 from enum import Enum
 
 #
-so_time_calculous_file = "time_calculous.so"
-
-#
-if not path.exists(so_time_calculous_file):
-
-    #
-    system("git clone https://github.com/Vicken-Ghoubiguian/time_calculous")
-    system("cc -fPIC -shared -o time_calculous.so time_calculous/time_calculous/time_calculous.c")
-
-#
-time_calculous_functions = CDLL(so_time_calculous_file)
-
-#
 class numeral(Enum):
     FIRST = 0
     SECOND= 1
@@ -35,6 +22,26 @@ class weekDay(Enum):
     THURSDAY = 4
     FRIDAY = 5
     SATURDAY = 6
+
+#
+def configurationTimeCalculous():
+
+    #
+    the_GitHub_repos_time_calculous = "https://github.com/Vicken-Ghoubiguian/time_calculous"
+    so_time_calculous_file = "time_calculous.so"
+
+    #
+    if not path.exists(so_time_calculous_file):
+
+        #
+        system("git clone https://github.com/Vicken-Ghoubiguian/time_calculous")
+        system("cc -fPIC -shared -o time_calculous.so time_calculous/time_calculous/time_calculous.c")
+
+    #
+    return CDLL(so_time_calculous_file)
+
+#
+time_calculous_functions = configurationTimeCalculous()
 
 # Definition of the 'time_calculous_function' array which contains all functions in the 'time_calculous' C library
 time_calculous_function = ['number_of_days_in_choosen_month_in_choosen_year', 'wished_number_in_year_is_day_in_choosen_year', 'wished_wday_in_choosen_year']
