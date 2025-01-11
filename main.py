@@ -162,7 +162,7 @@ class Time_calculous_functions_wishedWdayInChoosenMonth(Resource):
     def get(self, year, month, wday, hour, minute, second, numeral):
 
         """
-        Calculation of the wished weekday in a choosen month in a choosen year at a choosen time with second, minute, and hour
+        Calculation of the wished weekday in a choosen month in a choosen year at a choosen time with second, minute, and hour (the whole datetime according the UTC/GMT timezone)
         """
 
         #
