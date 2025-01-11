@@ -88,7 +88,7 @@ class Time_calculous_functions_numberOfDaysInChoosenMonthInChoosenYear(Resource)
     def get(self, month, year):
 
         """
-        Calculation of the total count of days in the choosen month in the choosen year
+        Calculation of the total count of days in the choosen month in the choosen year (the whole datetime according the UTC/GMT timezone)
         """
 
         #
@@ -104,7 +104,7 @@ class Time_calculous_functions_numberOfWeeksInAYearAccordingToTheIsoNorm(Resourc
     def get(self, year):
 
         """
-        Calculation of the total count of weeks in the choosing year
+        Calculation of the total count of weeks in the choosing year (the whole datetime according the UTC/GMT timezone)
         """
 
         #
@@ -122,7 +122,7 @@ class Time_calculous_functions_wishedWdayInChoosenYear(Resource):
     def get(self, year, wday, number_of_weekday_in_the_year):
 
         """
-        Calculation of the day according the number of the wished weekday in the wished year
+        Calculation of the day according the number of the wished weekday in the wished year (the whole datetime according the UTC/GMT timezone)
         """
 
         #
@@ -140,7 +140,7 @@ class Time_calculous_functions_wishedNumberInYearIsDayInChoosenYear(Resource):
     def get(self, mday, month, year):
 
         """
-        Calculation of the number of the choosen mday in the choosen month in the choosen year
+        Calculation of the number of the choosen mday in the choosen month in the choosen year (the whole datetime according the UTC/GMT timezone)
         """
 
         #
