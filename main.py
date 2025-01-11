@@ -107,7 +107,7 @@ class Time_calculous_functions_numberOfWeeksInAYearAccordingToTheIsoNorm(Resourc
         return {'year' : year, 'result' : result}, 200
 
 #
-@ns_time_calculous_functions.route('/wished_wday_in_choosen_year/<int:year>/<int:wday>/<int:number_of_weekday_in_the_year>', doc={})
+@ns_time_calculous_functions.route('/wished_wday_in_choosen_year/<int:year>/<int:wday>/<int:number_of_weekday_in_the_year>', doc={'params': {'year': '', 'wday': '', 'number_of_weekday_in_the_year': ''}})
 @ns_time_calculous_functions.param('year', 'Wished year', _in='query', type=int)
 @ns_time_calculous_functions.param('wday', 'Wished weekday (0 = sunday, 1 = monday, 2 = tuesday, 3 = wednesday, 4 = thursday, 5 = friday, 6 = saturday)', _in='query', type=weekDay, enum=[0, 1, 2, 3, 4, 5, 6])
 @ns_time_calculous_functions.param('number_of_weekday_in_the_year', 'Wished number of the chosen weekday in the chosen year', _in='query', type=int)
@@ -125,7 +125,7 @@ class Time_calculous_functions_wishedWdayInChoosenYear(Resource):
         return {'year' : year, 'wday' : wday, 'number_of_weekday_in_the_year' : number_of_weekday_in_the_year, 'result' : result}, 200
 
 #
-@ns_time_calculous_functions.route('/wished_number_in_year_is_day_in_choosen_year/<int:mday>/<int:month>/<int:year>', doc={})
+@ns_time_calculous_functions.route('/wished_number_in_year_is_day_in_choosen_year/<int:mday>/<int:month>/<int:year>', doc={'params': {'mday': '', 'month': '', 'year': ''}})
 @ns_time_calculous_functions.param('mday', 'mday', _in='query', type=int)
 @ns_time_calculous_functions.param('month', 'month', _in='query', type=int)
 @ns_time_calculous_functions.param('year', 'year', _in='query', type=int)
