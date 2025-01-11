@@ -34,8 +34,8 @@ def configurationTimeCalculous():
     if not path.exists(so_time_calculous_file):
 
         #
-        system("git clone https://github.com/Vicken-Ghoubiguian/time_calculous")
-        system("cc -fPIC -shared -o time_calculous.so time_calculous/time_calculous/time_calculous.c")
+        system("git clone " + the_GitHub_repos_time_calculous)
+        system("cc -fPIC -shared -o " + so_time_calculous_file + " time_calculous/time_calculous/time_calculous.c")
 
     #
     return CDLL(so_time_calculous_file)
