@@ -143,7 +143,7 @@ class Time_calculous_functions_wishedWdayInChoosenMonth(Resource):
         result = time_calculous_functions.wished_wday_in_choosen_month(year, month, wday, hour, minute, second, numeral)
 
         #
-        return {'result' : result}, 200
+        return {'year' : year, 'month' : month, 'wday' : wday, 'hour' : hour, 'minute' : minute, 'second' : second, 'numeral' : numeral, 'result' : result}, 200
 
 #
 if __name__ == '__main__':
