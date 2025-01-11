@@ -3,6 +3,7 @@ from flask import Flask
 from flask_restx import Resource, Api
 from ctypes import *
 from os import path, system
+from enum import Enum
 
 #
 so_time_calculous_file = "time_calculous.so"
@@ -16,6 +17,14 @@ if not path.exists(so_time_calculous_file):
 
 #
 time_calculous_functions = CDLL(so_time_calculous_file)
+
+#
+class numeral(Enum):
+    FIRST = 0
+    SECOND= 1
+    THIRD = 2
+    BEFORE_LAST = 3
+    LAST = 4
 
 # Definition of the 'time_calculous_function' array which contains all functions in the 'time_calculous' C library
 time_calculous_function = ['number_of_days_in_choosen_month_in_choosen_year', 'wished_number_in_year_is_day_in_choosen_year', 'wished_wday_in_choosen_year']
@@ -131,7 +140,7 @@ class Time_calculous_functions_wishedNumberInYearIsDayInChoosenYear(Resource):
 @ns_time_calculous_functions.param('hour', 'hour', _in='query', type=int)
 @ns_time_calculous_functions.param('minute', 'minute', _in='query', type=int)
 @ns_time_calculous_functions.param('second', 'second', _in='query', type=int)
-@ns_time_calculous_functions.param('numeral', 'numeral', _in='query', type=int, enum=[0, 1, 2, 3, 4])
+@ns_time_calculous_functions.param('numeral', 'numeral', _in='query', type=numeral, enum=[0, 1, 2, 3, 4])
 class Time_calculous_functions_wishedWdayInChoosenMonth(Resource):
     def get(self, year, month, wday, hour, minute, second, numeral):
 
