@@ -26,6 +26,16 @@ class numeral(Enum):
     BEFORE_LAST = 3
     LAST = 4
 
+#
+class weekDay(Enum):
+    SUNDAY = 0
+    MONDAY = 1
+    TUESDAY = 2
+    WEDNESDAY = 3
+    THURSDAY = 4
+    FRIDAY = 5
+    SATURDAY = 6
+
 # Definition of the 'time_calculous_function' array which contains all functions in the 'time_calculous' C library
 time_calculous_function = ['number_of_days_in_choosen_month_in_choosen_year', 'wished_number_in_year_is_day_in_choosen_year', 'wished_wday_in_choosen_year']
 
@@ -99,7 +109,7 @@ class Time_calculous_functions_numberOfWeeksInAYearAccordingToTheIsoNorm(Resourc
 #
 @ns_time_calculous_functions.route('/wished_wday_in_choosen_year/<int:year>/<int:wday>/<int:number_of_weekday_in_the_year>', doc={})
 @ns_time_calculous_functions.param('year', 'year', _in='query', type=int)
-@ns_time_calculous_functions.param('wday', 'wday', _in='query', type=int)
+@ns_time_calculous_functions.param('wday', 'wday', _in='query', type=weekDay, enum=[0, 1, 2, 3, 4, 5, 6])
 @ns_time_calculous_functions.param('number_of_weekday_in_the_year', 'number_of_weekday_in_the_year', _in='query', type=int)
 class Time_calculous_functions_wishedWdayInChoosenYear(Resource):
     def get(self, year, wday, number_of_weekday_in_the_year):
@@ -136,7 +146,7 @@ class Time_calculous_functions_wishedNumberInYearIsDayInChoosenYear(Resource):
 @ns_time_calculous_functions.route('/wished_wday_in_choosen_month/<int:year>/<int:month>/<int:wday>/<int:hour>/<int:minute>/<int:second>/<int:numeral>', doc={})
 @ns_time_calculous_functions.param('year', 'year', _in='query', type=int)
 @ns_time_calculous_functions.param('month', 'month', _in='query', type=int)
-@ns_time_calculous_functions.param('wday', 'wday', _in='query', type=int)
+@ns_time_calculous_functions.param('wday', 'wday', _in='query', type=weekDay, enum=[0, 1, 2, 3, 4, 5, 6])
 @ns_time_calculous_functions.param('hour', 'hour', _in='query', type=int)
 @ns_time_calculous_functions.param('minute', 'minute', _in='query', type=int)
 @ns_time_calculous_functions.param('second', 'second', _in='query', type=int)
