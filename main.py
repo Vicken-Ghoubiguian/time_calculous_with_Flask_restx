@@ -52,7 +52,7 @@ time_calculous_api = Api(time_calculous_with_flask_restx, title='time_calculous 
 
 # Definition of all namespaces
 ns_time_calculous_documentation = time_calculous_api.namespace('documentation', description='API routes for complete presentation and documentation of the time_calculous API and the used functions')
-ns_time_calculous_functions = time_calculous_api.namespace('functions', description='API routes for calculations on datetimes using the C library \'time_calculous\'')
+ns_time_calculous_functions = time_calculous_api.namespace('functions', description='API routes for calculations on datetimes using the C library \'time_calculous\' (the whole datetimes according the UTC/GMT timezone)')
 
 #
 @ns_time_calculous_documentation.route('/presentation')
