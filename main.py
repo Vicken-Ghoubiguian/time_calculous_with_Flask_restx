@@ -48,9 +48,12 @@ def configurationTimeCalculous():
 
         #
         if not path.isdir(repos_time_calculous) :
+
+            #
+            print("\nError : the C library time_calculous' is not available ! Quitting the app !\n")
         
             #
-            exit
+            quit()
 
         #
         system("cc -fPIC -shared -o " + so_time_calculous_file + " time_calculous/time_calculous/time_calculous.c")
