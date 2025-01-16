@@ -5,7 +5,7 @@ from os import path, system
 #
 def configurationTimeCalculous():
 
-    #
+    # Definition of all needed variables
     the_GitHub_repos_time_calculous = "https://github.com/Vicken-Ghoubiguian/time_calculous"
     repos_time_calculous = "time_calculous"
     so_time_calculous_file = "time_calculous.so"
