@@ -3,6 +3,10 @@ from ctypes import *
 from os import path, system
 
 #
+red = "\e[31m"
+reset = "\e[0m"
+
+#
 def isGitRepos(directory):
 
     #
@@ -35,7 +39,7 @@ def configurationTimeCalculous():
         if not path.isdir(repos_time_calculous) or not isGitRepos(repos_time_calculous):
 
             #
-            print("\nError : the C library time_calculous' is not available ! Quitting the app !\n")
+            print("\n" + red + "Error : the C library time_calculous' is not available ! Quitting the app !" + reset + "\n")
         
             #
             quit()
