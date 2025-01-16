@@ -28,6 +28,7 @@ def configurationTimeCalculous():
 
     #
     the_GitHub_repos_time_calculous = "https://github.com/Vicken-Ghoubiguian/time_calculous"
+    repos_time_calculous = "time_calculous"
     so_time_calculous_file = "time_calculous.so"
 
     #
@@ -44,6 +45,12 @@ def configurationTimeCalculous():
 
             #
             pass
+
+        #
+        if not path.isdir(repos_time_calculous) :
+        
+            #
+            exit
 
         #
         system("cc -fPIC -shared -o " + so_time_calculous_file + " time_calculous/time_calculous/time_calculous.c")
