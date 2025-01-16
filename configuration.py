@@ -10,7 +10,22 @@ reset = "\e[0m"
 def isGitRepos(directory):
 
     #
-    return True
+    result = True
+
+    #
+    #try:
+
+        #
+        # git rev-parse --is-inside-work-tree
+
+    #
+    #except Exception as exception:
+
+            #
+            
+
+    #
+    return result
 
 #
 def configurationTimeCalculous():
