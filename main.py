@@ -34,7 +34,18 @@ def configurationTimeCalculous():
     if not path.exists(so_time_calculous_file):
 
         #
-        system("git clone " + the_GitHub_repos_time_calculous)
+        try:
+
+            #
+            system("git clone " + the_GitHub_repos_time_calculous)
+        
+        #
+        except Exception as exception:
+
+            #
+            pass
+
+        #
         system("cc -fPIC -shared -o " + so_time_calculous_file + " time_calculous/time_calculous/time_calculous.c")
 
     #
