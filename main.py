@@ -27,8 +27,8 @@ class weekDay(Enum):
 #
 time_calculous_functions = configurationTimeCalculous()
 
-# Definition of the 'time_calculous_function' array which contains all functions in the 'time_calculous' C library
-time_calculous_function = ['number_of_days_in_choosen_month_in_choosen_year', 'wished_number_in_year_is_day_in_choosen_year', 'wished_wday_in_choosen_year']
+# Definition of the 'list_of_all_time_calculous_functions' array which contains all functions in the 'time_calculous' C library
+list_of_all_time_calculous_functions = ['number_of_days_in_choosen_month_in_choosen_year', 'wished_number_in_year_is_day_in_choosen_year', 'wished_wday_in_choosen_year']
 
 #
 time_calculous_with_flask_restx = Flask(__name__)
@@ -53,7 +53,7 @@ class Time_calculous_documentation_presentation_route(Resource):
 
 #
 @ns_time_calculous_documentation.route('/lexicon/<string:function>', doc={'params': {'function': 'Choosed function of the "time_calculous" C library to execute'}})
-@ns_time_calculous_documentation.param('function', 'function', _in='query', type=str, enum=time_calculous_function)
+@ns_time_calculous_documentation.param('function', 'function', _in='query', type=str, enum=list_of_all_time_calculous_functions)
 class Time_calculous_documentation_lexicon(Resource):
     def get(self,function):
 
