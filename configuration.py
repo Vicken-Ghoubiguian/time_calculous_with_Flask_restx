@@ -64,5 +64,8 @@ def configurationTimeCalculous():
         #
         system("cc -fPIC -shared -o " + so_time_calculous_file + " time_calculous/time_calculous/time_calculous.c")
 
+        #
+        print("\n" + green + bold + "Well done : the C library time_calculous' is now downloaded and installed ! It's now time to play !" + reset + "\n")
+
     #
     return CDLL(so_time_calculous_file)
