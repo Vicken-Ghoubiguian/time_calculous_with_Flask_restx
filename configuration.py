@@ -4,7 +4,7 @@ from os import path, system
 
 #
 red = "\033[91m"
-bold = '\033[1m'
+bold = "\033[1m"
 reset = "\033[0m"
 
 #
