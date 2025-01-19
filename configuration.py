@@ -2,9 +2,11 @@
 from ctypes import *
 from os import path, system
 
-# Definition of all needed colors
+# Definition of all needed colors and typographic styles
 red = "\033[91m"
 green = "\033[92m"
+cyan = "\033[96m"
+underline = "\033[4m"
 bold = "\033[1m"
 reset = "\033[0m"
 
