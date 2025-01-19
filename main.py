@@ -48,7 +48,7 @@ class Time_calculous_documentation_presentation_route(Resource):
         """
 
         #
-        return {'presentation' : '', 'description': '', 'github' : 'https://github.com/Vicken-Ghoubiguian/time_calculous_with_Flask_restx', 'dockerhub' : '', 'time_calculous' : 
+        return {'code' : 200, 'presentation' : '', 'description': '', 'github' : 'https://github.com/Vicken-Ghoubiguian/time_calculous_with_Flask_restx', 'dockerhub' : '', 'time_calculous' : 
 'https://github.com/Vicken-Ghoubiguian/time_calculous'}, 200
 
 #
@@ -62,7 +62,7 @@ class Time_calculous_documentation_lexicon(Resource):
         """
 
         #
-        return {'function': function}, 200
+        return {'code' : 200, 'function': function}, 200
 
 #
 @ns_time_calculous_functions.route('/number_of_days_in_choosen_month_in_choosen_year/<int:month>/<int:year>', doc={})
@@ -79,7 +79,7 @@ class Time_calculous_functions_numberOfDaysInChoosenMonthInChoosenYear(Resource)
         result = time_calculous_functions.number_of_days_in_choosen_month_in_choosen_year(month, year)
 
         #
-        return {'year' : year, 'month' : month, 'result' : result}, 200
+        return {'code' : 200, 'year' : year, 'month' : month, 'result' : result}, 200
 
 #
 @ns_time_calculous_functions.route('/number_of_weeks_in_a_year_according_to_the_iso_norm/<int:year>', doc={})
@@ -95,7 +95,7 @@ class Time_calculous_functions_numberOfWeeksInAYearAccordingToTheIsoNorm(Resourc
         result = time_calculous_functions.number_of_weeks_in_a_year_according_to_the_iso_norm(year)
 
         #
-        return {'year' : year, 'result' : result}, 200
+        return {'code' : 200, 'year' : year, 'result' : result}, 200
 
 #
 @ns_time_calculous_functions.route('/wished_wday_in_choosen_year/<int:year>/<int:wday>/<int:number_of_weekday_in_the_year>', doc={'params': {'year': '', 'wday': '', 'number_of_weekday_in_the_year': ''}})
@@ -113,7 +113,7 @@ class Time_calculous_functions_wishedWdayInChoosenYear(Resource):
         result = time_calculous_functions.wished_wday_in_choosen_year(year, wday, number_of_weekday_in_the_year)
 
         #
-        return {'year' : year, 'wday' : wday, 'number_of_weekday_in_the_year' : number_of_weekday_in_the_year, 'result' : result}, 200
+        return {'code' : 200, 'year' : year, 'wday' : wday, 'number_of_weekday_in_the_year' : number_of_weekday_in_the_year, 'result' : result}, 200
 
 #
 @ns_time_calculous_functions.route('/wished_number_in_year_is_day_in_choosen_year/<int:mday>/<int:month>/<int:year>', doc={'params': {'mday': '', 'month': '', 'year': ''}})
@@ -131,7 +131,7 @@ class Time_calculous_functions_wishedNumberInYearIsDayInChoosenYear(Resource):
         result = time_calculous_functions.wished_number_in_year_is_day_in_choosen_year(mday, month, year)
 
         #
-        return {'mday' : mday, 'month' : month, 'year' : year, 'result' : result}, 200
+        return {'code' : 200, 'mday' : mday, 'month' : month, 'year' : year, 'result' : result}, 200
     
 #
 @ns_time_calculous_functions.route('/wished_wday_in_choosen_month/<int:year>/<int:month>/<int:wday>/<int:hour>/<int:minute>/<int:second>/<int:numeral>', doc={})
@@ -153,7 +153,7 @@ class Time_calculous_functions_wishedWdayInChoosenMonth(Resource):
         result = time_calculous_functions.wished_wday_in_choosen_month(year, month, wday, hour, minute, second, numeral)
 
         #
-        return {'year' : year, 'month' : month, 'wday' : wday, 'hour' : hour, 'minute' : minute, 'second' : second, 'numeral' : numeral, 'result' : result}, 200
+        return {'code' : 200, 'year' : year, 'month' : month, 'wday' : wday, 'hour' : hour, 'minute' : minute, 'second' : second, 'numeral' : numeral, 'result' : result}, 200
 
 #
 if __name__ == '__main__':
