@@ -75,5 +75,5 @@ def configurationTimeCalculous():
         #
         print("\n" + cyan + bold + "Information : the C library time_calculous' is already downloaded and installed ! Starting the app !" + reset + "\n")
 
-    #
+    # Generate the CDLL and return it to be used in the app
     return CDLL(so_time_calculous_file)
