@@ -39,13 +39,13 @@ def configurationTimeCalculous():
     repos_time_calculous = "time_calculous"
     so_time_calculous_file = "time_calculous.so"
 
-    #
+    # In the case where the 'time_calculous.so' file does not exist
     if not path.exists(so_time_calculous_file):
 
         #
         try:
 
-            #
+            # Clone the 'time_calculous' repository from the GitHub official repository (here : https://github.com/Vicken-Ghoubiguian/time_calculous)
             system("git clone " + the_GitHub_repos_time_calculous)
         
         #
