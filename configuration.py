@@ -69,7 +69,7 @@ def configurationTimeCalculous():
         #
         print("\n" + green + bold + "Well done : the C library time_calculous' is now downloaded and installed ! It's now time to play !" + reset + "\n")
 
-    #
+    # Otherwise 
     else:
 
         #
