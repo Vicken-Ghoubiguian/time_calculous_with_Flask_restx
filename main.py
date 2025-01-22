@@ -49,7 +49,7 @@ class Time_calculous_documentation_presentation_route(Resource):
 
         #
         return {'code' : 200, 'presentation' : '', 'description': '', 'github' : 'https://github.com/Vicken-Ghoubiguian/time_calculous_with_Flask_restx', 'dockerhub' : '', 'time_calculous' : 
-'https://github.com/Vicken-Ghoubiguian/time_calculous'}, 200
+'https://github.com/Vicken-Ghoubiguian/time_calculous', 'dockerhub' : ''}, 200
 
 #
 @ns_time_calculous_documentation.route('/lexicon/<string:function>', doc={'params': {'function': 'Choosed function of the "time_calculous" C library to execute'}})
