@@ -13,7 +13,7 @@ reset = "\033[0m"
 #
 def isGitRepos(directory):
 
-    #
+    # Definition of all needed variables
     git_folder = ".git"
     result = True
 
@@ -29,7 +29,7 @@ def isGitRepos(directory):
         #
         result = True
 
-    #
+    # Return the 'result' boolean variable
     return result
 
 #
