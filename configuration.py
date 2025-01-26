@@ -15,7 +15,7 @@ def isAvailableGitRepos(directory):
 
     # Definition of all needed variables
     git_folder = ".git"
-    git_folder_structure = ["config", "HEAD", "hooks", "objects", "objects/info", "objects/pack", "refs", "refs/heads", "refs/tags"]
+    git_folder_structure = ["config", "HEAD", "hooks", "index", "packed-refs", "objects", "objects/info", "objects/pack", "refs", "refs/remotes", "refs/heads", "refs/tags"]
     result = True
 
     # 
