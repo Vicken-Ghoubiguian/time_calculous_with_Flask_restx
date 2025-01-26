@@ -18,10 +18,10 @@ def isGitRepos(directory):
     git_folder_structure = ["config", "HEAD", "hooks", "objects", "objects/info", "objects/pack", "refs", "refs/heads", "refs/tags"]
     result = True
 
-    #
+    # 
     if not path.exists(directory + "/" + git_folder):
 
-        #
+        # Assign the 'False' boolean value to the 'result' boolean variable
         result = False
 
     #
@@ -33,10 +33,10 @@ def isGitRepos(directory):
             #
             if not path.exists(fgs):
 
-                #
+                # Assign the 'False' boolean value to the 'result' boolean variable
                 result = False
 
-                #
+                # Quit the loop
                 break
 
     # Return the 'result' boolean variable
