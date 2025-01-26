@@ -47,4 +47,5 @@ Precision : in this little tutorial, the created virtual environment is named `t
 * [ctypes — A foreign function library for Python](https://docs.python.org/3/library/ctypes.html),
 * [How can I print bold text in Python?](https://stackoverflow.com/questions/8924173/how-can-i-print-bold-text-in-python),
 * [Git Repository Structure](https://www.greengeeks.com/tutorials/git-repository-structure/),
+* [What is in that .git directory ?](https://blog.meain.io/2023/what-is-in-dot-git/),
 * [What is the .git folder ?](https://stackoverflow.com/questions/29217859/what-is-the-git-folder)
