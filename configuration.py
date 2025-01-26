@@ -14,19 +14,20 @@ reset = "\033[0m"
 def isGitRepos(directory):
 
     #
+    git_folder = ".git"
     result = True
 
     #
-    #try:
+    if not path.exists(directory + "/" + git_folder):
 
         #
-        # git rev-parse --is-inside-work-tree
+        result = False
 
     #
-    #except Exception as exception:
+    else :
 
-            #
-            
+        #
+        result = True
 
     #
     return result
