@@ -3,11 +3,16 @@
 <a name="contents"></a>
 ## Contents
 
+* [Introduction](#introduction),
 * [How to create and configure your virtual environment ?](#how_to_create_and_configure_your_virtual_environment),
+* [Conclusion](#conclusion)
 * [Useful links](#useful_links),
 
+<a name="introduction"></a>
+## Introduction
+
 <a name="how_to_create_and_configure_your_virtual_environment"></a>
-### How to create and configure your virtual environment ?
+## How to create and configure your virtual environment ?
 
 To create and configure your virtual environment, you have to create it using the command bellow :
 
@@ -34,6 +39,9 @@ source the_name_of_your_virtual_environment/bin/activate
 ```
 
 Precision : in this little tutorial, the created virtual environment is named `the_name_of_your_virtual_environment` but you can give it the name that you want.
+
+<a name="conclusion"></a>
+## Conclusion
 
 <a name="useful_links"></a>
 ## Useful links
