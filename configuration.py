@@ -71,7 +71,7 @@ def configurationTimeCalculous():
             #
             print("\n" + red + bold + "Error : the C library time_calculous' is not available ! Quitting the app !" + reset + "\n")
         
-            #
+            # Quit the current web application
             quit()
 
         #
