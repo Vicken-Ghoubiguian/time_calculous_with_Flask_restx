@@ -10,7 +10,7 @@ underline = "\033[4m"
 bold = "\033[1m"
 reset = "\033[0m"
 
-#
+# Definition of the function 'isAvailableGitRepos' which determine if the 'directory' repos is an available Git repos
 def isAvailableGitRepos(directory):
 
     # Definition of all needed variables
@@ -42,7 +42,7 @@ def isAvailableGitRepos(directory):
     # Return the 'result' boolean variable
     return result
 
-#
+# Definition of the function 'configurationTimeCalculous' which configure the 'time_calculous_with_Flask_restx' project to be ready to run
 def configurationTimeCalculous():
 
     # Definition of all needed variables
