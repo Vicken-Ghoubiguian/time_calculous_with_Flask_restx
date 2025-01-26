@@ -11,7 +11,7 @@ bold = "\033[1m"
 reset = "\033[0m"
 
 #
-def isGitRepos(directory):
+def isAvailableGitRepos(directory):
 
     # Definition of all needed variables
     git_folder = ".git"
@@ -32,7 +32,7 @@ def isGitRepos(directory):
 
             #
             if not path.exists(directory + "/" + git_folder + "/" + fgs):
-                
+
                 # Assign the 'False' boolean value to the 'result' boolean variable
                 result = False
 
@@ -66,7 +66,7 @@ def configurationTimeCalculous():
             pass
 
         #
-        if not path.isdir(repos_time_calculous) or not isGitRepos(repos_time_calculous):
+        if not path.isdir(repos_time_calculous) or not isAvailableGitRepos(repos_time_calculous):
 
             #
             print("\n" + red + bold + "Error : the C library time_calculous' is not available ! Quitting the app !" + reset + "\n")
